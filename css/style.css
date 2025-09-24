@@ -1,0 +1,404 @@
+/* 通用样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* 语言切换 */
+.language-switch {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.language-switch a {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 0 2px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    text-decoration: none;
+    border-radius: 15px;
+    font-size: 0.9em;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.language-switch a:hover,
+.language-switch a.lang-active {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-1px);
+}
+
+/* 头部 */
+header {
+    position: relative;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 50px 40px 40px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+header p {
+    font-size: 1.3em;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    font-size: 1.1em !important;
+    color: #888 !important;
+    font-weight: 300;
+}
+
+/* 主要内容 */
+main {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+section {
+    margin-bottom: 50px;
+}
+
+section:last-child {
+    margin-bottom: 0;
+}
+
+h2 {
+    font-size: 2.2em;
+    margin-bottom: 25px;
+    color: #2c3e50;
+    border-bottom: 3px solid #667eea;
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+/* 应用网格 */
+.app-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 25px;
+}
+
+.app-card {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #e9ecef;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.app-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    transition: left 0.5s;
+}
+
+.app-card:hover::before {
+    left: 100%;
+}
+
+.app-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.app-icon {
+    font-size: 3em;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.app-card h3 {
+    color: #2c3e50;
+    margin-bottom: 12px;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.app-card p {
+    color: #666;
+    margin-bottom: 20px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.app-platforms {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.platform {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.8em;
+    font-weight: 500;
+}
+
+.app-links {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+
+.app-links a {
+    padding: 10px 18px;
+    background: #667eea;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 0.95em;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.app-links a:hover {
+    background: #5a67d8;
+    transform: translateY(-2px);
+}
+
+.app-status {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.status-badge {
+    background: #f39c12;
+    color: white;
+    padding: 6px 14px;
+    border-radius: 15px;
+    font-size: 0.85em;
+    font-weight: 500;
+}
+
+.coming-soon {
+    opacity: 0.8;
+    border: 2px dashed #ddd;
+}
+
+/* 开发理念网格 */
+.philosophy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.philosophy-item {
+    text-align: center;
+    padding: 25px;
+    background: #f8f9fa;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.philosophy-item:hover {
+    transform: translateY(-5px);
+}
+
+.philosophy-item h3 {
+    color: #2c3e50;
+    margin-bottom: 12px;
+    font-size: 1.3em;
+}
+
+.philosophy-item p {
+    color: #666;
+    line-height: 1.5;
+}
+
+/* 联系方式网格 */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.contact-item {
+    text-align: center;
+    padding: 25px;
+    background: #f8f9fa;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: translateY(-3px);
+}
+
+.contact-item h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.contact-item p {
+    margin: 0;
+}
+
+.contact-item a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+/* 页脚 */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    padding: 25px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.1em;
+}
+
+/* 隐私政策页面样式 */
+.privacy-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.privacy-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 30px 20px 25px;
+    border-bottom: 3px solid #667eea;
+    position: relative;
+}
+
+.privacy-header h1 {
+    font-size: 2.5em;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.highlight-box {
+    background: linear-gradient(135deg, #e8f5e8, #f0f8f0);
+    padding: 25px;
+    border-left: 5px solid #27ae60;
+    margin: 25px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(39, 174, 96, 0.1);
+}
+
+.contact-info {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 12px;
+    margin-top: 40px;
+    border: 1px solid #e9ecef;
+}
+
+.contact-info h2 {
+    text-align: left;
+    border-bottom: 2px solid #667eea;
+    margin-bottom: 20px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    header {
+        padding: 30px 20px 25px;
+    }
+
+    header h1 {
+        font-size: 2.2em;
+    }
+
+    main {
+        padding: 25px 20px;
+    }
+
+    .app-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .philosophy-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    .language-switch {
+        position: static;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .privacy-header {
+        padding-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    .app-card, .philosophy-item, .contact-item {
+        padding: 20px;
+    }
+
+    .privacy-container {
+        margin: 10px;
+        padding: 15px;
+    }
+}
