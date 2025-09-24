@@ -22,8 +22,8 @@ body {
 /* 语言切换 */
 .language-switch {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 15px;
+    right: 15px;
     z-index: 1000;
 }
 
@@ -31,18 +31,24 @@ body {
     display: inline-block;
     padding: 8px 12px;
     margin: 0 2px;
-    background: rgba(255, 255, 255, 0.2);
+    background: #667eea;
     color: white;
     text-decoration: none;
     border-radius: 15px;
     font-size: 0.9em;
+    font-weight: 500;
     transition: all 0.3s ease;
-    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
 }
 
-.language-switch a:hover,
+.language-switch a:hover {
+    background: #5a67d8;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
 .language-switch a.lang-active {
-    background: rgba(255, 255, 255, 0.3);
+    background: #4c51bf;
     transform: translateY(-1px);
 }
 
@@ -51,7 +57,7 @@ header {
     position: relative;
     text-align: center;
     background: rgba(255, 255, 255, 0.95);
-    padding: 50px 40px 40px;
+    padding: 60px 40px 40px;
     border-radius: 20px;
     margin-bottom: 30px;
     box-shadow: 0 15px 40px rgba(0,0,0,0.1);
@@ -247,7 +253,61 @@ h2 {
     line-height: 1.5;
 }
 
-/* 联系方式网格 */
+/* 开发者信息 */
+.developer-info {
+    text-align: center;
+}
+
+.developer-info > p {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+.developer-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 25px;
+    background: #f8f9fa;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-3px);
+}
+
+.stat-item h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.stat-item p {
+    margin: 0;
+    color: #666;
+}
+
+.stat-item a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.stat-item a:hover {
+    text-decoration: underline;
+}
+
+/* 保留联系方式网格样式（用于其他页面） */
 .contact-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -309,7 +369,7 @@ footer {
 .privacy-header {
     text-align: center;
     margin-bottom: 40px;
-    padding: 30px 20px 25px;
+    padding: 55px 20px 25px;
     border-bottom: 3px solid #667eea;
     position: relative;
 }
@@ -369,7 +429,8 @@ footer {
         grid-template-columns: 1fr;
     }
 
-    .contact-grid {
+    .contact-grid,
+    .developer-stats {
         grid-template-columns: 1fr;
     }
 
@@ -384,7 +445,11 @@ footer {
     }
 
     .privacy-header {
-        padding-top: 20px;
+        padding-top: 30px;
+    }
+
+    header {
+        padding-top: 30px;
     }
 }
 

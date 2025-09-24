@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FocusMouse - Technical Support</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="privacy-container">
+        <div class="privacy-header">
+            <div class="language-switch">
+                <a href="support.html" class="lang-active">EN</a>
+                <a href="zh/support.html">中文</a>
+            </div>
+
+            <h1>🛠️ FocusMouse Technical Support</h1>
+            <p>Get help with FocusMouse</p>
+        </div>
+
+        <section>
+            <h2>Quick Solutions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>🔐 Accessibility Permission</h3>
+                    <p><strong>Issue:</strong> Hotkeys not working</p>
+                    <p><strong>Solution:</strong> Go to System Preferences → Security & Privacy → Privacy → Accessibility, then add FocusMouse to the list.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>🖥️ Multi-Monitor Setup</h3>
+                    <p><strong>Issue:</strong> App doesn't detect all displays</p>
+                    <p><strong>Solution:</strong> Ensure all displays are properly connected and configured in System Preferences → Displays.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>⌨️ Hotkey Conflicts</h3>
+                    <p><strong>Issue:</strong> Hotkeys conflict with other apps</p>
+                    <p><strong>Solution:</strong> Try different key combinations or check System Preferences → Keyboard → Shortcuts for conflicts.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>System Requirements</h2>
+            <ul>
+                <li><strong>macOS:</strong> 11.5 (Big Sur) or later</li>
+                <li><strong>Architecture:</strong> Intel x86_64 and Apple Silicon (M1/M2/M3) supported</li>
+                <li><strong>Permissions:</strong> Accessibility access required</li>
+                <li><strong>Multiple Displays:</strong> At least 2 connected displays recommended</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Troubleshooting Steps</h2>
+            <ol>
+                <li><strong>Restart the App:</strong> Quit and relaunch FocusMouse</li>
+                <li><strong>Check Permissions:</strong> Verify accessibility permissions are granted</li>
+                <li><strong>Reset Settings:</strong> Remove preferences file: <code>~/Library/Preferences/com.yourcompany.FocusMouse.plist</code></li>
+                <li><strong>Restart macOS:</strong> Sometimes a system restart resolves display detection issues</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Still Need Help?</h2>
+            <div class="contact-info">
+                <p>If you're still experiencing issues, please contact us:</p>
+                <div class="contact-grid">
+                    <div class="contact-item">
+                        <h3>📧 Email Support</h3>
+                        <p><a href="mailto:xycoder@163.com">xycoder@163.com</a></p>
+                        <p><small>Response within 48 hours</small></p>
+                    </div>
+                </div>
+
+                <h3>When contacting support, please include:</h3>
+                <ul>
+                    <li>macOS version (e.g., "macOS 14.1")</li>
+                    <li>FocusMouse version</li>
+                    <li>Detailed description of the issue</li>
+                    <li>Steps to reproduce the problem</li>
+                    <li>Screenshots if applicable</li>
+                </ul>
+            </div>
+        </section>
+
+        <footer style="text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee;">
+            <p style="color: #666;">FocusMouse Technical Support</p>
+            <p style="margin-top: 10px;">
+                <a href="../index.html" style="color: #667eea; margin-right: 15px;">← Home</a>
+                <a href="privacy/focusmouse.html" style="color: #667eea;">Privacy Policy</a>
+            </p>
+        </footer>
+    </div>
+
+    <style>
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .faq-item {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+
+        .faq-item h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .faq-item p {
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+
+        code {
+            background: #e9ecef;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 0.9em;
+        }
+
+        ol, ul {
+            margin-left: 20px;
+            line-height: 1.8;
+        }
+
+        @media (max-width: 768px) {
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</body>
+</html>
