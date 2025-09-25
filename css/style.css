@@ -67,6 +67,7 @@ header h1 {
     font-size: 3em;
     margin-bottom: 10px;
     background: linear-gradient(45deg, #667eea, #764ba2);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -149,6 +150,19 @@ h2 {
     font-size: 3em;
     margin-bottom: 15px;
     text-align: center;
+}
+
+.app-icon-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 18px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.app-icon-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
 .app-card h3 {
@@ -460,6 +474,12 @@ footer {
 
     .app-card, .philosophy-item, .contact-item {
         padding: 20px;
+    }
+
+    .app-icon-img {
+        width: 64px;
+        height: 64px;
+        border-radius: 14px;
     }
 
     .privacy-container {
