@@ -1,0 +1,15 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "SHSP7BFJ55.com.ccj.feedreminder",
+        "paths": ["/feedreminder/*"]
+      },
+      {
+        "appID": "SHSP7BFJ55.com.ccj.voiceReminder",
+        "paths": ["/voiceminder/*"]
+      }
+    ]
+  }
+}
